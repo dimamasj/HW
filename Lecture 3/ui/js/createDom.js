@@ -85,7 +85,7 @@ wrap.className = 'wrap';
 
 // создаем элемент header
 var header = document.createElement('header');
-header.style.cssText = addStyles({ // добавляем стили созданному блоку
+header.style.cssText = addStyles({ // добавляем стили созданному элементу
     'padding': '20px',
     'background': '#666',
     'position': 'relative'
@@ -93,19 +93,19 @@ header.style.cssText = addStyles({ // добавляем стили создан
 
 // создаем элемент для основного контента
 var mainContent = document.createElement('main');
-mainContent.style.cssText = addStyles({ // добавляем стили созданному блоку
+mainContent.style.cssText = addStyles({ // добавляем стили созданному элементу
     'display': 'flex',
     'justifyContent': 'space-between',
     'padding': '25px',
     'background': '#ccc'
 });
 
-// создаем список
+// создаем блок списка
 var list = document.createElement('ul');
 
-
+// создаем элемент для левого контента
 var contentLeft = document.createElement('div');
-contentLeft.style.cssText = addStyles({ // добавляем стили созданному блоку
+contentLeft.style.cssText = addStyles({ // добавляем стили созданному элементу
     'width': '75%',
     'background': '#404441',
     'padding': '50px 25px',
@@ -116,29 +116,28 @@ contentLeft.className = 'main-content';
 
 setTimeout(function () {
 
-    // создаем блок для логотипа
+    // создаем элемент логотип
     var logoBlock = document.createElement('div');
-    logoBlock.style.cssText = addStyles({ // добавляем стили созданному блоку
+    logoBlock.style.cssText = addStyles({ // добавляем стили созданному элементу
         'width': '250px',
         'display': 'inline-block'
     });
 
     // создаем элемент logo
     var logo = document.createElement('img');
-    logo.style.cssText = addStyles({ // добавляем стили созданному блоку
+    logo.style.cssText = addStyles({ // добавляем стили созданному элементу
         'max-width': '100%', 'height': 'auto'
     });
     logo.setAttribute('src', 'ui/img/test.jpg'); // устанавливаем атрибуте src
     logoBlock.appendChild(logo);
 
     var nav = document.createElement('nav');
-    nav.style.cssText = addStyles({ // добавляем стили созданному блоку
+    nav.style.cssText = addStyles({ // добавляем стили созданному элементу
         'max-width': '750px',
         'display': 'inline-block',
         'vertical-align': 'bottom',
         'margin-left': '150px'
     });
-
 
     for (var i = 0; i < 4; i++) {
         var btnElement = document.createElement('a');
@@ -162,7 +161,7 @@ setTimeout(function () {
     var time = new Date();
     var normalizeTime = time.toLocaleTimeString();
     var clock = document.createElement('div');
-    clock.style.cssText = addStyles({ // добавляем стили созданному блоку
+    clock.style.cssText = addStyles({ // добавляем стили созданному элементу
         'position': 'absolute',
         'top': '50px',
         'right': '50px'
@@ -231,7 +230,7 @@ setTimeout(function () {
 
     ////Вариант 2 :
     //// производим манипуляции с самим DOM
-    //for (var i = 0; i < newList[0].childNodes.length - 1; i++) {
+    //for (var i = 0; i < newList[0].childNodes.length; i++) {
     //    newList[0].insertBefore(newList[0].childNodes[i], newList[0].childNodes[0]);
     //}
 
@@ -242,7 +241,7 @@ setTimeout(function () {
 
     // создаем элемент footer
     var footer = document.createElement('footer');
-    footer.style.cssText = addStyles({ // добавляем стили созданному блоку
+    footer.style.cssText = addStyles({ // добавляем стили созданному элементу
         'background': '#404441',
         'padding': '25px',
         'margin': '0 25px'
@@ -315,12 +314,12 @@ setTimeout(function () {
 //
 //function  addStyles () {
 //    ...
-//   return
+//   return;
 //}
 //
 //function  addAttributes () {
 //    ...
-//   return
+//   return;
 //}
 //
 // пример создания элемента
