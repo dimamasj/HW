@@ -1,6 +1,7 @@
-// в данной работе хотел как-то организовать код,
-// чтобы не городить все в одно полотно.
-
+/** в данной работе хотел как-то организовать код,
+ чтобы не городить все в одно полотно.
+ ниже то, что получилось
+ */
 
 var body = document.body;
 
@@ -51,7 +52,6 @@ function changeListText(parent) {
     odd[2].innerHTML = 'New Text 3';
 }
 
-
 function setListAttributes(parent) {
     var even = parent.querySelectorAll('li:nth-child(even)'),
         length = even.length - 1;
@@ -60,7 +60,6 @@ function setListAttributes(parent) {
     }
     console.log(parent.querySelectorAll('li:nth-child(odd)'));
 }
-
 
 // изменение положения элементов навигации на странице
 function changeBtnPosition() {
@@ -282,7 +281,6 @@ setTimeout(function () {
     changeBtnPosition(list);
 }, 20000);
 
-
 // интересует мнение по поводу создания мини конструктора для элемента.
 // в которой прилетает object со всеми параметрами и на выходе выдает готовый элемент
 //
@@ -328,3 +326,5 @@ setTimeout(function () {
 //    'styles': {'maxWidth': '100%', 'height': 'auto'},
 //    'class': 'class-1 class-2'}
 //});
+
+
