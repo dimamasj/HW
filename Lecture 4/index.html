@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create DOM</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="ui/css/style.css"/>
+
+</head>
+<body>
+<table width="100%" border="1" cellspacing="0">
+    <thead>
+    <tr>
+        <th>№</th>
+        <th>Title 1</th>
+        <th>Title 2</th>
+        <th>Title 3</th>
+        <th>Title 4</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="report-title" data-title="report-1">
+        <th colspan="5">Отчет по механике <span data-add="row">add row +</span></th>
+    </tr>
+    <tr class="report-1">
+        <td>1</td>
+        <td data-used="used-td"></td>
+        <td data-used="used-td"></td>
+        <td data-used="used-td"></td>
+
+        <td><span data-delete="delete">delete row -</span></td>
+    </tr>
+    <tr class="report-1">
+        <td>2</td>
+        <td data-used="used-td"></td>
+        <td data-used="used-td"></td>
+        <td data-used="used-td"></td>
+        <td><span data-delete="delete">delete row -</span></td>
+    </tr>
+    <tr class="report-1">
+        <td>3</td>
+        <td data-used="used-td">123</td>
+        <td data-used="used-td">test</td>
+        <td data-used="used-td">54354234</td>
+        <td><span data-delete="delete">delete row -</span></td>
+    </tr>
+
+    <tr class="report-title" data-title="report-2">
+        <th colspan="5">Отчет по механике <span data-add="row">add row +</span></th>
+    </tr>
+    <tr class="report-2">
+        <td>1</td>
+        <td data-used="used-td"></td>
+        <td data-used="used-td"></td>
+        <td data-used="used-td"></td>
+        <td><span data-delete="delete">delete row -</span></td>
+    </tr>
+    <tr class="report-2">
+        <td>2</td>
+        <td data-used="used-td">123</td>
+        <td data-used="used-td">test</td>
+        <td data-used="used-td">54354234</td>
+        <td><span data-delete="delete">delete row -</span></td>
+    </tr>
+    <tr class="report-2">
+        <td>3</td>
+        <td data-used="used-td"></td>
+        <td data-used="used-td"></td>
+        <td data-used="used-td"></td>
+        <td><span data-delete="delete">delete row -</span></td>
+    </tr>
+    </tbody>
+</table>
+
+<script src="ui/js/eventsList.js"></script>
+</body>
+</html>
+
+
+
+		
