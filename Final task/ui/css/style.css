@@ -1,0 +1,916 @@
+/**
+* Small navigation
+*
+* 1. Helpers
+* 2. Global layout
+* 3. Widget general styles
+* 4. Calendar styles
+* 5. Search widget styles
+* 6. Tabs widget styles
+* 7. Graph widget styles
+* 8. Mailer widget styles
+*
+ */
+
+/**--------------------------------------------------
+ * 1. Helpers
+------------------------------------------------------ */
+/* clearfix
+   ========================================================================== */
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**--------------------------------------------------
+ * END helpers
+------------------------------------------------------ */
+
+/**--------------------------------------------------
+ * 2. Global layout
+------------------------------------------------------ */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font: 14px "Gotham-Book", "Times New Roman", sans-serif;
+    color: #666;
+    min-width: 960px;
+    background: #d9d9d9;
+}
+
+.content-wrap {
+    width: 960px;
+    padding: 50px 0;
+    margin: 0 auto;
+}
+
+/**--------------------------------------------------
+ * END global layout
+------------------------------------------------------ */
+
+/**--------------------------------------------------
+ * 3. Widget general styles
+------------------------------------------------------ */
+
+.widget {
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background: #fff;
+    -webkit-box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.44);
+    -moz-box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.44);
+    box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.44);
+}
+
+.widget-body {
+    padding: 14px 25px 26px;
+}
+
+.widget-overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 100;
+}
+
+#widget-search, #widget-mail, #widget-graph-value {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-top: -300px;
+    margin-left: -175px;
+    z-index: 1000;
+}
+
+/* Form inputs style
+   ========================================================================== */
+
+.widget input, .widget button, .widget textarea {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.widget input, .widget textarea, .widget .input {
+    background: #f4f4f4;
+    color: #999898;
+    font-family: "Gotham-Book", sans-serif;
+    -webkit-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+}
+
+.widget textarea {
+    padding: 16px 13px;
+    resize: vertical;
+    min-width: 200px;
+    margin-bottom: 23px;
+}
+
+/* ========================================================================== */
+
+.submit {
+    cursor: pointer;
+    padding: 21px 5px;
+}
+
+.main-button {
+    background-color: #fb6362;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.45);
+
+    /*background color transition*/
+    -webkit-transition: background-color .5s ease-out;
+    -moz-transition: background-color .5s ease-out;
+    -o-transition: background-color .5s ease-out;
+    transition: background-color .5s ease-out;
+}
+
+.main-button:hover {
+    background-color: #404a58;
+}
+
+.form-element {
+    position: relative;
+    margin-bottom: 23px;
+}
+
+.label {
+    display: block;
+    position: relative;
+    margin-bottom: 23px;
+    /*overflow: hidden;*/
+}
+
+.label .title {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.input {
+    display: block;
+    min-height: 44px;
+    padding: 0 41px 0 13px;
+}
+
+.form-element .input {
+    line-height: 44px;
+
+}
+
+.dark-bg {
+    background: #414b59;
+    border-radius: 2px;
+}
+
+.select-btn {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    width: 37px;
+    height: 37px;
+}
+
+/* Custom checkbox styles
+   ========================================================================== */
+.checkbox span {
+    display: block;
+    position: relative;
+    padding-left: 34px;
+    line-height: 23px;
+    cursor: pointer;
+}
+
+.checkbox input {
+    display: none
+}
+
+.checkbox span:before {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    top: 50%;
+    left: 0;
+    margin-top: -11.5px;
+    border-radius: 2px;
+    background: #f4f4f4;
+    -webkit-box-shadow: inset 1px 0 1px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: inset 1px 0 1px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: inset 1px 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.checkbox input:checked + span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    margin-top: -5.5px;
+    width: 16px;
+    height: 11px;
+    background: url("../img/sprite.png") -26px 0 no-repeat;
+}
+
+/* ========================================================================== */
+
+/* Icon styles
+   ========================================================================== */
+input.icon-calendar {
+    width: 37px;
+    height: 37px;
+    background: #414b59 url("../img/icons/icon-calendar.png") no-repeat center;
+}
+
+.icon-arrow-down {
+    background: #414b59 url("../img/icons/icon-arrow-down.png") no-repeat center;
+}
+
+.icon-search {
+    background-image: url("../img/icons/icon-search.png");
+    background-repeat: no-repeat;
+    background-position: 21% center;
+}
+
+.icon-add {
+    background: url("../img/icons/icon-plus.png") no-repeat center;
+}
+
+.icon-clip {
+    background: url("../img/icons/icon-clip.png") no-repeat center;
+}
+
+.icon-comments {
+    background: url("../img/icons/icon-comments.png") no-repeat;
+}
+
+.icon-like {
+    background: url("../img/icons/icon-likes.png") no-repeat;
+}
+
+.icon-optic {
+    background-image: url("../img/icons/icon-eye.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-pace {
+    background-image: url("../img/icons/icon-place-big.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-star {
+    background-image: url("../img/icons/icon-star.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ========================================================================== */
+
+/**--------------------------------------------------
+ * END Widget general styles
+------------------------------------------------------ */
+
+/**--------------------------------------------------
+ * 4. Calendar styles
+------------------------------------------------------ */
+
+.widget-calendar {
+    width: 346px;
+}
+
+.widget-calendar table {
+    margin-bottom: 22px;
+}
+
+.calendar-header {
+    position: relative;
+    padding: 0 25px;
+    background: #404a58;
+    border-radius: 4px 4px 0 0;
+    color: #fff;
+}
+
+.calendar-header h4 {
+    text-align: center;
+    padding: 21px;
+    font-size: 17px;
+}
+
+.calendar-prev {
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    left: 38px;
+    top: 50%;
+    margin-top: -6px;
+    background: url("../img/sprite.png") 0 -42px no-repeat;
+}
+
+.calendar-next {
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    right: 38px;
+    top: 50%;
+    margin-top: -6px;
+
+    background: url("../img/sprite.png") -52px -19px no-repeat;
+}
+
+.widget-calendar thead {
+    font-family: "Gotham-Medium", sans-serif;
+}
+
+.widget-calendar th, .widget-calendar td {
+    text-align: center;
+}
+
+.widget-calendar th {
+    width: 41px;
+    height: 41px;
+}
+
+.widget-calendar th abbr {
+    display: block;
+    line-height: 41px;
+    text-decoration: none;
+}
+
+.widget-calendar td.other-month {
+    color: #c5c5c5;
+}
+
+.widget-calendar td.today {
+    color: #fb6362;
+}
+
+.widget-calendar td.selected {
+    background: #fb6362;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.widget-calendar td.booked {
+    background: #06fb46;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.widget-calendar td:hover {
+    /*background: #fb6362;*/
+    color: #fb6362;
+    border-radius: 50%;
+    /*background color transition*/
+    -webkit-transition: background-color .5s ease-out;
+    -moz-transition: background-color .5s ease-out;
+    -o-transition: background-color .5s ease-out;
+    transition: background-color .5s ease-out;
+}
+
+.widget-calendar td {
+    width: 41px;
+    line-height: 41px;
+}
+
+.calendar-bottom {
+    padding: 0 25px 26px;
+}
+
+.widget-calendar .submit {
+    padding: 21px 5px;
+}
+
+/**--------------------------------------------------
+ * END Calendar styles
+------------------------------------------------------ */
+
+/**--------------------------------------------------
+ * 5. Search widget styles
+------------------------------------------------------ */
+.widget-search {
+    display: none;
+    width: 346px;
+}
+
+.widget-search figure {
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 4px 4px 0 0;
+}
+
+.widget-search figure img {
+    border-radius: 4px 4px 0 0;
+}
+
+.widget-search figcaption {
+    position: absolute;
+    bottom: 17px;
+    left: 22px;
+    font-size: 25px;
+    color: #fff;
+}
+
+figcaption .place {
+    display: block;
+    margin-left: 4px;
+    padding: 4px 0 0 17px;
+    background: url("../img/icons/icon-place.png") no-repeat left center;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.select-people {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    /*IE flexbox styles*/
+    display: -ms-flexbox;
+    -ms-flex-flow: row;
+    -ms-flex-pack: justify;
+}
+
+.search-form .checkbox {
+    position: relative;
+    display: block;
+    margin-bottom: 23px;
+}
+
+.search-form .label:nth-child(2) {
+    margin-bottom: 16px;
+
+}
+
+.select-people .label {
+    margin-bottom: 18px;
+}
+
+.select-people .form-element {
+    width: 138px;
+}
+
+.select-people .select-btn {
+    top: 4px;
+}
+
+.select-people ul {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+.widget-search ul.input {
+    padding: 0;
+}
+
+.select-people ul li {
+    cursor: pointer;
+    padding-left: 13px;
+}
+
+.select-people ul li:hover {
+    background: #414b59;
+    color: #fff;
+}
+
+.search-form .submit {
+    padding: 21px 5px;
+}
+
+/**--------------------------------------------------
+ * END Search widget styles
+------------------------------------------------------ */
+
+/**--------------------------------------------------
+ * 6. Tabs widget styles
+------------------------------------------------------ */
+
+.widget-tabs {
+    width: 792px;
+}
+
+.tabs-nav {
+    width: 72px;
+    float: left;
+}
+
+.tabs-nav li {
+    background: #404a58;
+}
+
+.tabs-nav li:first-child {
+    border-radius: 4px 0 0;
+}
+
+.tabs-nav li:first-child a {
+    border-radius: 4px 0 0;
+}
+
+.tabs-nav li:last-child {
+    border-radius: 0 0 0 4px;
+}
+
+.tabs-nav li:last-child a {
+    border-radius: 0 0 0 4px;
+}
+
+.tabs-nav li.active a {
+    background-color: #fb6362;
+    border-bottom: none;
+    padding: 55px 0 58px;
+}
+
+.tabs-nav li:last-child.active a {
+    border-bottom: none;
+    padding: 55px 0 59px;
+}
+
+.tabs-nav a:hover {
+    background-color: rgba(251, 99, 98, 0.5);
+    border-bottom: none;
+    padding: 55px 0 58px;
+}
+
+.tabs-nav a {
+    display: block;
+    padding: 55px 0 57px;
+    border-bottom: 1px solid #242931;
+    /*background color transition*/
+    -webkit-transition: background-color .3s ease-out;
+    -moz-transition: background-color .3s ease-out;
+    -o-transition: background-color .3s ease-out;
+    transition: background-color .3s ease-out;
+}
+
+.tabs-nav li:last-child a {
+    border-bottom: none;
+    padding: 55px 0 59px;
+}
+
+.tabs-nav li:last-child a:hover {
+    padding: 55px 0 59px;
+}
+
+.tabs-content {
+    width: 718px;
+    height: 340px;
+    overflow: hidden;
+    float: right;
+    font-family: "Gotham-Light", sans-serif;
+}
+
+.tab-item {
+    display: none;
+    /*display: flex;*/
+    flex-direction: row;
+    justify-content: space-around;
+
+    /*IE flexbox styles*/
+    display: -ms-flexbox;
+    -ms-flex-flow: row;
+    -ms-flex-pack: justify;
+}
+
+.tab-item.active {
+    display: flex;
+}
+
+.tab-item h2 {
+    margin-bottom: 11px;
+    padding: 0 35px 0 0;
+    font-size: 21px;
+    font-family: "Gotham-Medium", sans-serif;
+    line-height: 30px;
+}
+
+.tab-description {
+    position: relative;
+    width: 353px;
+    padding: 25px 35px 0;
+}
+
+.tab-description:after {
+    content: "";
+    position: absolute;
+    right: -23px;
+    top: 35px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 0 25px 25px;
+    border-color: transparent transparent transparent #ffffff;
+    z-index: 1;
+}
+
+.reviews-counter {
+    display: block;
+    margin-bottom: 30px;
+    color: #999999;
+}
+
+.reviews-counter span {
+    color: #4d4d4d;
+}
+
+.tab-description p {
+    height: 120px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    line-height: 24px;
+    color: #999999;
+}
+
+.tab-img {
+    width: 363px;
+    position: relative;
+}
+
+.tab-img img {
+    width: 100%;
+    border-radius: 0 4px 4px 0;
+}
+
+.read-more {
+    font-family: "Gotham-Book", sans-serif;
+    color: #fb6362;
+}
+
+.read-more:hover {
+    color: #404a58;
+}
+
+.tab-counter {
+    position: absolute;
+    right: 27px;
+    bottom: 24px;
+    font-size: 17px;
+    color: #fff;
+}
+
+.tab-counter span {
+    display: inline-block;
+    margin-left: 14px;
+    padding-left: 35px;
+    line-height: 21px;
+    cursor: pointer;
+}
+
+/**--------------------------------------------------
+ * END Tabs widget styles
+------------------------------------------------------ */
+
+/**--------------------------------------------------
+ * 7. Graph widget styles
+------------------------------------------------------ */
+
+.widget-graph {
+    width: 791px;
+    padding: 48px 46px 12px 40px;
+    position: relative;
+    font-family: "Gotham-Medium", sans-serif;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.graph-wrap {
+    position: relative;
+}
+
+.graph-scale span {
+    display: block;
+    height: 20px;
+    margin-bottom: 51px;
+    border-bottom: 1px solid #eaeaea;
+    line-height: 18px;
+}
+
+.graph-body {
+    position: absolute;
+    width: 595px;
+    /*top: 66px;*/
+    top: 20px;
+    /*left: 104px;*/
+    left: 75px;
+    /*bottom: 63px;*/
+    /*bottom: 95px;*/
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-between;*/
+    justify-content: space-around;
+
+    /*IE flexbox styles*/
+    display: -ms-flexbox;
+    -ms-flex-flow: row;
+    -ms-flex-pack: justify;
+}
+
+.graph-item {
+    height: 100%;
+    width: 55px;
+}
+
+.graph-item .scale {
+    position: absolute;
+    bottom: 0;
+    width: 55px;
+    background: #fb6362;
+    border-radius: 2px;
+
+    /*graph column rise animation*/
+    -webkit-transition: 1s ease-out;
+    -moz-transition: 1s ease-out;
+    -o-transition: 1s ease-out;
+    transition: 1s ease-out;
+    cursor: pointer;
+}
+
+.scale:hover .graph-tooltip {
+    display: block;
+}
+
+.graph-item abbr {
+    position: absolute;
+    bottom: -31px;
+    width: 55px;
+    left: 50%;
+    margin-left: -27.5px;
+    text-align: center;
+}
+
+.graph-tooltip {
+    position: absolute;
+    display: none;
+    top: -45px;
+    width: 55px;
+    padding: 0 3px;
+    border-radius: 2px;
+    background: #404a58;
+    text-align: center;
+    color: #fff;
+}
+
+.graph-tooltip:after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    margin-left: -6.5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 6.5px 0 6.5px;
+    border-color: #404a58 transparent transparent transparent;
+}
+
+/**--------------------------------------------------
+ * END Graph widget styles
+------------------------------------------------------ */
+
+/**--------------------------------------------------
+ * 8. mail widget styles
+------------------------------------------------------ */
+.widget-mail {
+    display: none;
+    width: 380px;
+    padding: 25px 25px 21px;
+}
+
+.widget-mail.active {
+    display: block;
+}
+
+.mail-form ul.input {
+    min-height: 44px;
+}
+
+.mail-form .icon-add {
+    bottom: auto;
+    top: 4px;
+}
+
+.email-list.input {
+    padding: 0 41px 0 4px;
+}
+
+.email-list li {
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.email-list li span {
+    display: inline-block;
+    padding: 0 9px 0 10px;
+    background: #404a58;
+    line-height: 38px;
+    color: #fff;
+}
+
+.email-list li span:after {
+    content: "";
+    display: inline-block;
+    margin-left: 7px;
+    width: 8px;
+    height: 8px;
+    background: url("../img/sprite.png") -8px -42px no-repeat;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.file-load span {
+    cursor: pointer;
+}
+
+input.file-upload {
+    width: 1px;
+    padding: 0 0 0 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99999;
+    cursor: pointer;
+    background: url("../img/icons/icon-clip.png") no-repeat center;
+}
+
+.mail-form .submit {
+    float: right;
+    width: 127px;
+    padding: 15px 5px;
+}
+
+/**--------------------------------------------------
+ * END mail widget styles
+------------------------------------------------------ */
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/**--------------------------------------------------
+ * Graph value widget styles
+------------------------------------------------------ */
+
+.graph-form .title {
+    width: 16%;
+    display: inline-block;
+}
+
+.graph-form .input {
+    width: 82%;
+    display: inline-block;
+    min-height: 32px;
+}
+
+.graph-value {
+    display: none;
+    width: 345px;
+    /*height: 350px;*/
+    overflow: auto;
+}
+
+.close {
+    float: left;
+    width: 127px;
+    padding: 15px 5px;
+}
+
+input::-webkit-datetime-edit, input::-webkit-inner-spin-button, input::-webkit-clear-button {
+    display: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 50px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.widget .input.error-val {
+    border: 1px solid red;
+}
